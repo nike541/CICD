@@ -25,6 +25,7 @@ jobs:
             YT_API_KEY: ${{ secrets.YT_API_KEY }}
         run: |
             ls -R
+            mkdir -p data
             python data-pipeline.py
       - name: Check for changes
         id: git-check

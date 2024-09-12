@@ -23,7 +23,9 @@ jobs:
       - name: Run data data-pipeline 
         env: 
             YT_API_KEY: ${{ secrets.YT_API_KEY }}
-        run: python data-pipeline.py
+        run: |
+            ls -R
+            python data-pipeline.py
       - name: Check for changes
         id: git-check
         run : | 
